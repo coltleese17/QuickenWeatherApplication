@@ -9,7 +9,6 @@ $(document).ready(function(){
             $("#formErrorMsg").hide();
             event.preventDefault();
             let forecastType = $('input[name="forecastType"]:checked').val()
-           // console.log(forecastType);
             loadData(forecastType);
          }
     }); 
@@ -50,8 +49,8 @@ function loadData(forecastType) {
         url: quickenWeatherURL,
         method: 'GET'
     }).done(function(result) {
-
-        $cityName.append(result.name);
+        //these should just setting the .text field but running out of time to refactor, append will cause bugs on multiple submissions
+        $cityName.text(result.name);
         $countryName.append(result.sys.country);
         $sunriseTime.append(getTime(result.sys.sunrise));
         $sunsetTime.append(getTime(result.sys.sunset));
