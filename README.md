@@ -1,4 +1,4 @@
-# QuickenWeather
+# Quicken Weather App
 
 Basic jQuery weather app fulfilling the requirements for the first 4 stories found here: https://interviews.apps.qlmortgageservices.com/
 
